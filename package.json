@@ -30,6 +30,7 @@
     "@pnotify/core": "^5.2.0",
     "bootstrap.native": "^4.0.6",
     "css-loader": "^6.2.0",
+    "handlebars": "^4.7.7",
     "html-includes": "^4.4.1",
     "lodash.debounce": "^4.0.8",
     "material-design-icons": "^3.0.1",
