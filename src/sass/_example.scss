@@ -46,3 +46,17 @@ img {
   max-width: 100%;
   height: auto;
 }
+button,
+label {
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

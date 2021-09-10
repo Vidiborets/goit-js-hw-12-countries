@@ -22,13 +22,17 @@
     "parcel-bundler": "^1.12.5",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "parcel-plugin-nuke-dist": "^1.0.1",
+    "pnotify": "^5.2.0",
     "posthtml-include": "^1.7.1",
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "@pnotify/core": "^5.2.0",
     "bootstrap.native": "^4.0.6",
     "css-loader": "^6.2.0",
     "html-includes": "^4.4.1",
+    "lodash.debounce": "^4.0.8",
+    "material-design-icons": "^3.0.1",
     "scss": "^0.2.4"
   }
 }
