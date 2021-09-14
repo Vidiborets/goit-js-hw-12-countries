@@ -1,6 +1,6 @@
-import refs from './refsCountries.js'
-import debounce from 'lodash.debounce'
-import updateCountries from './updateCountries'
+import refs from './refsCountries.js';
+import debounce from 'lodash.debounce';
+import updateCountries from './updateCountries';
 import fetchCountries from './fetchCountries';
 
 refs.inputForm.addEventListener('input', debounce(searchCountries, 500));

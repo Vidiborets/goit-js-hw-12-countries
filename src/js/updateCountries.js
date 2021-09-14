@@ -1,7 +1,7 @@
 import countriesCardTps from '../tamplase/countries.hbs'
 import countriesCardAll from '../tamplase/countries-list.hbs'
 import refs from '../js/refsCountries.js'
-import fetchCountries from './fetchCountries';
+import fetchCountries from '../js/fetchCountries';
 
 function updateCountries(data) {
     const markupCountAll = countriesCardTps(data);
@@ -12,7 +12,6 @@ function updateCountries(data) {
         return
     }
     if (data.length === 0) {
-        refs.cardContainer.insertAdjacentHTML('beforeend', markupCountAll)
         return
     }
     if (data.length === 1) {
