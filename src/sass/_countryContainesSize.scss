@@ -1,0 +1,44 @@
+.js-card-container {
+  display: flex;
+  justify-content: center;
+}
+.container-search {
+  width: 528px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.image-country-box {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+}
+.image-country {
+  border-radius: 10px;
+  box-shadow: 3px 3px 3px 7px rgba(0, 0, 0, 0.06);
+}
+.container-info {
+  :hover {
+    color: var(--accent-text-color);
+  }
+}
+.country-name-title {
+  text-align: center;
+  color: var(--accent-link-color);
+  cursor: pointer;
+}
+.list-country-title {
+  list-style: none;
+}
+.item-country-title {
+  display: flex;
+  align-items: baseline;
+}
+.country-title {
+  margin-top: 0;
+  margin-right: 10px;
+  font-size: 25px;
+}
+.country-name {
+  margin-top: 0;
+  font-size: 20px;
+}

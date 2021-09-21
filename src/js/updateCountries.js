@@ -1,6 +1,7 @@
 import countriesCardTps from '../tamplase/countries.hbs'
 import countriesCardAll from '../tamplase/countries-list.hbs'
 import refs from '../js/refsCountries.js'
+import alert from './notificationCountry';
 import fetchCountries from '../js/fetchCountries';
 
 function updateCountries(data) {
@@ -8,8 +9,13 @@ function updateCountries(data) {
     const marckupList = countriesCardAll(data);
 
     if (data.status === 404) {
-        alert('Nothing found')
-        return
+        alert({
+            type: 'notice',
+            text: 'Nothing found ☹',
+            delay: 2000,
+            width: '300px',
+            maxTextHeight: null,
+        });
     }
     if (data.length === 0) {
         return
@@ -19,7 +25,12 @@ function updateCountries(data) {
         return;
     }
     if (data.length > 10) {
-        alert('Too many matches found.Please enter a more specific query!')
+        alert({
+            type: 'error',
+            text: 'Too many matches found. Please enter a more specific query!',
+            delay: 2000,
+            maxTextHeight: null,
+        });
         return;
     }
     refs.cardContainer.insertAdjacentHTML('beforeend', marckupList);

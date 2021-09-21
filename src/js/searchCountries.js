@@ -13,10 +13,25 @@ function searchCountries(e) {
     fetchCountries(searchQuery)
         .then(updateCountries)
         .catch(onFetchError);
+    
+    refs.cardContainer.addEventListener('click',searchForm)
 }
 
-function searchForm() {
+function searchForm(event) {
+
+    if (!event.target.classList.contains('title-country')) {
+        return
+    }
+
+    refs.inputForm.value = event.target.textContent;
+
+    clearCountries()
+
+    fetchCountries(refs.inputForm.value).then(updateCountries)
+
+    refs.inputForm.value = '';
     
+    refs.cardContainer.removeEventListener('click',searchForm)
 }
 
 function startSearch(e) {
@@ -25,7 +40,7 @@ function startSearch(e) {
 }
 
 function onFetchError(error) {
-    alert('Nothing found')
+    // alert('Nothing found')
 };
 
 function clearCountries() {
