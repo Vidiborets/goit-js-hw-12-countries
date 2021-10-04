@@ -1,10 +1,10 @@
 {{#each this}}
 <div class="container-search">
     <div class="image-country-box">
-        <img class="image-country" src="{{flag}}" alt="{{name}}">
+        <img class="image-country" src="{{flags.[0]}}" alt="{{name.common}}">
     </div>
     <div class="container-info">
-        <h2 class="country-name-title">{{name}}</h2>
+        <h2 class="country-name-title">{{name.common}}</h2>
     </div>
         <ul class="list-country-title">
             <li class="item-country-title">
@@ -18,7 +18,7 @@
             <li class="item-country-title">
                 <h2 class="country-title">Languages:</h2>
                 {{#each languages}}
-                <p class="item-country-title">{{this.name}}</p>
+                <p class="item-country-title">{{this}}</p>
                 {{/each}}
             </li>
         </ul>
